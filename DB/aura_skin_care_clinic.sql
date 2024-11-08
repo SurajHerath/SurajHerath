@@ -1,0 +1,1 @@
+SELECT * FROM aura_skin_care_clinic.treatment;
