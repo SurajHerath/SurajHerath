@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>PatientController</servlet-name>
+        <servlet-class>Controller.PatientController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PatientController</servlet-name>
+        <url-pattern>/patients</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>AppointmentController</servlet-name>
+    <servlet-class>Controller.AppointmentController</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AppointmentController</servlet-name>
+    <url-pattern>/Appointment</url-pattern>
+</servlet-mapping>
+
+<el-implicit-objects>
+        <el-implicit-object>request</el-implicit-object>
+        <el-implicit-object>session</el-implicit-object>
+        <el-implicit-object>application</el-implicit-object>
+    </el-implicit-objects>
+
+</web-app>
